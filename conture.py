@@ -55,11 +55,10 @@ def apply_mask_to_image(image_path, mask, output_path):
 
 
 if __name__ == "__main__":
-    process_mask_image("/Users/themachine1337/Workspace/03_business/02_Fell/fell/final","/Users/themachine1337/Workspace/03_business/02_Fell/fell/finalout")
-    # if len(sys.argv) != 3:
-    #     print("Usage: python mask_processor.py <input_folder> <output_folder>")
-    # else:
-    #     input_folder = sys.argv[1]
-    #     output_folder = sys.argv[2]
-    #     os.makedirs(output_folder, exist_ok=True)
-    #     process_mask_image(input_folder, output_folder)
+    if len(sys.argv) != 3:
+        print("Usage: python mask_processor.py <input_folder> <output_folder>")
+    else:
+        input_folder = sys.argv[1]
+        output_folder = sys.argv[2]
+        os.makedirs(output_folder, exist_ok=True)
+        process_mask_image(input_folder, output_folder)

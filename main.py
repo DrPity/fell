@@ -13,7 +13,7 @@ WARNING = '\033[93m'
 FAIL = '\033[91m'
 NOCOLOR = '\033[0m'
 
-DEBUG = True
+DEBUG = False
 
 def process_images(input_directory, output_directory):
     if not os.path.exists(output_directory):
