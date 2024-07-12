@@ -76,7 +76,7 @@ def remove_bg(src_img_path, out_img_path, model):
     input_labels = np.array([1]
                             )
     session = new_session(model_name)
-    processed_img = remove(img, session=session, only_mask=True, alpha_matting=True, alpha_matting_foreground_threshold=300,alpha_matting_background_threshold=5, alpha_matting_erode_size=10)
+    processed_img = remove(img, post_process_mask=True, session=session, only_mask=True, alpha_matting=True, alpha_matting_foreground_threshold=240,alpha_matting_background_threshold=10, alpha_matting_erode_size=15)
     
     # only need for SAM model
     # processed_img = remove(img, session=session, input_points=input_points, input_labels=input_labels)
